@@ -3,16 +3,26 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomePageComponent } from './home-page/home-page.component';
+
+import { ChartistModule } from 'ng-chartist';
+import { HttpService } from './services/http.service';
+import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomePageComponent,
+    BarChartComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartistModule
   ],
-  providers: [],
+  providers: [
+    HttpService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
