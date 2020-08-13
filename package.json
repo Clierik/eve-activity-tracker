@@ -20,9 +20,8 @@
     "@angular/platform-browser-dynamic": "~10.0.2",
     "@angular/router": "~10.0.2",
     "angular": "^1.8.0",
-    "chartist": "^0.11.4",
     "moment": "^2.27.0",
-    "ng-chartist": "^4.1.0",
+    "particles.js": "^2.0.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
@@ -31,7 +30,6 @@
     "@angular-devkit/build-angular": "~0.1000.1",
     "@angular/cli": "~10.0.1",
     "@angular/compiler-cli": "~10.0.2",
-    "@types/chartist": "^0.11.0",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",

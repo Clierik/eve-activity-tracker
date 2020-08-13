@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
-import { ChartistModule } from 'ng-chartist';
 import { HttpService } from './services/http.service';
 import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
 
@@ -17,8 +16,7 @@ import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    ChartistModule
+    AppRoutingModule
   ],
   providers: [
     HttpService
