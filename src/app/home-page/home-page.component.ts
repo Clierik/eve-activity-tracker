@@ -16,6 +16,7 @@ declare var particlesJS: any;
 export class HomePageComponent implements OnInit {
 
   constructor() {
+    // https://vincentgarreau.com/particles.js/ for customising animated particle effects
     // particlesJS('particles-js', '../assets/particlesjs-config.json', function() {
     //   console.log('callback - particles.js config loaded');
     // });

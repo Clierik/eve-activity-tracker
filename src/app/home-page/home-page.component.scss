@@ -1,14 +1,17 @@
 body {
   margin: 0;
+  .particlesComp {
+    
+  }
 }
 
 /* ---- particles.js container ---- */
 #particles-js {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   background-color: #24364e;
   background-repeat: repeat;
-  background-size: cover;
+  background-size: auto;
   background-position: 50% 50%;
 }
