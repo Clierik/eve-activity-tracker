@@ -9,6 +9,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/app/material-module';
 import { SearchComponentComponent } from './components/search-component/search-component.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,24 @@ import { SearchComponentComponent } from './components/search-component/search-c
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     NgxChartsModule,
     MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     HttpService
   ],
-  bootstrap: [AppComponent]
+  entryComponents: [
+    SearchComponentComponent
+  ],
+  bootstrap: [
+    AppComponent,
+    // SearchComponentComponent //DOTO not sure
+  ]
 })
 export class AppModule { }

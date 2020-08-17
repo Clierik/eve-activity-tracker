@@ -8,11 +8,11 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class BarChartComponent implements OnInit {
 
-    view: any[] = [700, 400];
+    // view: any[] = [700, 400];
     data: any[];
-    showXAxis = true;
-    showYAxis = true;
-    gradient = false;
+    showXAxis = false;
+    showYAxis = false;
+    gradient = true;
     showLegend = true;
     showXAxisLabel = true;
     xAxisLabel = 'Country';
@@ -20,7 +20,7 @@ export class BarChartComponent implements OnInit {
     yAxisLabel = 'Population';
 
     colorScheme = {
-      domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+      domain: ['#11ECE5']
     };
 
   constructor(private http: HttpService) {

@@ -17,10 +17,10 @@ export class HomePageComponent implements OnInit {
     particlesJS("particles-js", {
       "particles": {
         "number": {
-          "value": 200,
+          "value": 150,
           "density": {
             "enable": false,
-            "value_area": 800
+            "value_area": 300
           }
         },
         "color": {
@@ -52,7 +52,7 @@ export class HomePageComponent implements OnInit {
           }
         },
         "size": {
-          "value": 3,
+          "value": 5,
           "random": true,
           "anim": {
             "enable": false,
@@ -63,14 +63,14 @@ export class HomePageComponent implements OnInit {
         },
         "line_linked": {
           "enable": true,
-          "distance": 300,
+          "distance": 500,
           "color": "#11ece5",
           "opacity": 0.09620472365193136,
           "width": 0
         },
         "move": {
           "enable": true,
-          "speed": 0.3,
+          "speed": 0.4,
           "direction": "bottom",
           "random": false,
           "straight": false,

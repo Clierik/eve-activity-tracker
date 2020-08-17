@@ -8,15 +8,31 @@ export class HttpService {
   data: any =  [
     {
       "name": "Germany",
-      "value": 8940000
+      "value": 8
     },
     {
       "name": "USA",
-      "value": 5000000
+      "value": 5
     },
     {
       "name": "France",
-      "value": 7200000
+      "value": 7
+    },
+    {
+      "name": "1111",
+      "value": 1
+    },
+    {
+      "name": "22222",
+      "value": 5
+    },
+    {
+      "name": "3333333",
+      "value": 7
+    },
+    {
+      "name": "444",
+      "value": 2
     }
   ];
 
