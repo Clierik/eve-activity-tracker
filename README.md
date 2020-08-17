@@ -1,2 +1,2 @@
 # eve-activity-tracker
- EVE Online Charakter Activity Tracker
+ EVE Online Character Activity Tracker
