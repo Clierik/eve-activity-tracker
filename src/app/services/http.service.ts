@@ -25,4 +25,17 @@ export class HttpService {
   hello() {
     return this.data;
   }
+
+  // GET charakter ID
+  // https://esi.evetech.net/latest/search/?categories=character&datasource=tranquility&language=en-us&search=Kovier&strict=true
+
+  // responce
+  // {
+  //   "character": [
+  //     90211685
+  //   ]
+  // }
+
+  
+
 }
