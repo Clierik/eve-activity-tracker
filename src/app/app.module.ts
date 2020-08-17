@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
-
+import { BarChartComponent } from  './charts/bar-chart/bar-chart.component';
 import { HttpService } from './services/http.service';
-import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,9 @@ import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    NgxChartsModule
   ],
   providers: [
     HttpService
