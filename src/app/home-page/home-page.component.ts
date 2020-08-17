@@ -15,15 +15,10 @@ declare var particlesJS: any;
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() {
-    // https://vincentgarreau.com/particles.js/ for customising animated particle effects
-    // particlesJS('particles-js', '../assets/particlesjs-config.json', function() {
-    //   console.log('callback - particles.js config loaded');
-    // });
-  }
+  constructor() {}
 
   ngOnInit(): void {
-    // TODO lines below needs to go... somewhere else probably to a seperate file
+    // https://vincentgarreau.com/particles.js/ for customising animated particle effects
     particlesJS("particles-js", {
       "particles": {
         "number": {
