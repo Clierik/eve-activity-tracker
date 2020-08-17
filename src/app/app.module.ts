@@ -7,18 +7,22 @@ import { BarChartComponent } from  './charts/bar-chart/bar-chart.component';
 import { HttpService } from './services/http.service';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from 'src/app/material-module';
+import { SearchComponentComponent } from './search-component/search-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    BarChartComponent
+    BarChartComponent,
+    SearchComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgxChartsModule
+    NgxChartsModule,
+    MaterialModule,
   ],
   providers: [
     HttpService
