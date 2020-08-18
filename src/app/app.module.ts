@@ -11,6 +11,7 @@ import { MaterialModule } from 'src/app/material-module';
 import { SearchComponentComponent } from './components/search-component/search-component.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TimeService } from 'src/app/services/time.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule
   ],
   providers: [
-    HttpService
+    HttpService,
+    TimeService
   ],
   entryComponents: [
     SearchComponentComponent
