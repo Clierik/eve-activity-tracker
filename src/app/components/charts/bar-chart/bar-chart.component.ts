@@ -8,7 +8,6 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class BarChartComponent implements OnInit {
 
-    // view: any[] = [700, 400];
     data: any[];
     showXAxis = false;
     showYAxis = false;
