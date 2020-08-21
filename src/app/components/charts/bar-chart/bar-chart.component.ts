@@ -8,6 +8,11 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class BarChartComponent implements OnInit {
 
+    myColors: any = [
+      { name: 'workDay', value: '#11ECE5' },
+      { name: 'weekend', value: '#11ECE5' }
+    ]; // TODO need diferent colors for value
+
     data: any[];
     showXAxis = false;
     showYAxis = false;
