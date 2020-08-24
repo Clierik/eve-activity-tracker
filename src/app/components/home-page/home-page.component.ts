@@ -33,7 +33,7 @@ export class HomePageComponent implements OnInit {
             "color": "#000000"
           },
           "polygon": {
-            "nb_sides": 5
+            "nb_sides": 10
           },
           "image": {
             "src": "img/github.svg",
@@ -57,15 +57,15 @@ export class HomePageComponent implements OnInit {
           "anim": {
             "enable": false,
             "speed": 40,
-            "size_min": 0.1,
+            "size_min": 0.05,
             "sync": false
           }
         },
         "line_linked": {
           "enable": true,
-          "distance": 500,
+          "distance": 250,
           "color": "#11ece5",
-          "opacity": 0.09620472365193136,
+          "opacity": 0.09,
           "width": 0
         },
         "move": {

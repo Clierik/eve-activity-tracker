@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  esiUrl: 'https://esi.evetech.net/',
+  zkillUrl: 'https://zkillboard.com/api/'
 };
 
 /*

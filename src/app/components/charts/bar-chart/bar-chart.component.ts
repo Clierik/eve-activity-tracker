@@ -13,15 +13,17 @@ export class BarChartComponent implements OnInit {
       { name: 'weekend', value: '#11ECE5' }
     ]; // TODO need diferent colors for value
 
+
+    // view: any[] = [ 50, 50]
     data: any[];
     showXAxis = false;
     showYAxis = false;
     gradient = true;
-    showLegend = true;
+    showLegend = false;
     showXAxisLabel = true;
-    xAxisLabel = 'Country';
-    showYAxisLabel = true;
-    yAxisLabel = 'Population';
+    xAxisLabel = 'day';
+    showYAxisLabel = false;
+    yAxisLabel = 'activity count';
 
     colorScheme = {
       domain: ['#11ECE5']

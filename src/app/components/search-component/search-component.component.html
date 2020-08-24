@@ -1,16 +1,6 @@
-<div class="form">
-    <mat-form-field style="min-width: 20%;">
+<form (keydown)='search($event)' class="form">
+    <mat-form-field style="width: auto;">
       <mat-label style="font-size: 16px; margin: 3px;">Name</mat-label>
-      <input matInput>
+      <input type="text" matInput>
     </mat-form-field>
-    <br>
-    <mat-form-field style="min-width: 20%;">
-      <mat-label style="font-size: 16px; margin: 3px;">Select</mat-label>
-      <mat-select>
-        <mat-option value="option">Character</mat-option>
-        <mat-option value="option">Corporation</mat-option>
-        <mat-option value="option">Alliance</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <br>
-  </div>
+</form>
