@@ -1,6 +1,4 @@
-<form (keydown)='search($event)' class="form">
-    <mat-form-field style="width: auto;">
-      <mat-label style="font-size: 16px; margin: 3px;">Name</mat-label>
-      <input type="text" matInput>
-    </mat-form-field>
-</form>
+<mat-form-field style="width: auto;">
+  <mat-label style="font-size: 16px; margin: 3px;">Name</mat-label>
+  <input (keydown)='search($event)' type="text" matInput>
+</mat-form-field>

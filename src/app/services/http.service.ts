@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment'
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { CharacterID } from 'src/app/interfaces'
 
 @Injectable({
   providedIn: 'root'
@@ -26,13 +27,14 @@ export class HttpService {
 
   public getEntityIdByName(entityName) {
     if (!environment.production) {
-      return this.httpClient.get(`${environment.esiUrl}latest/search/?categories=character&datasource=tranquility&language=en-us&search=${entityName}&strict=true`, {headers: this.reqHeader});
+      return this.httpClient.get<CharacterID>(`${environment.esiUrl}latest/search/?categories=character&datasource=tranquility&language=en-us&search=${entityName}&strict=true`, {headers: this.reqHeader});
     }
   }
 
   public getEntityKillLossData(entityID) {
     if (!environment.production) {
-      return this.httpClient.get(`${environment.zkillUrl}characterID/${entityID}/`, {headers: this.reqHeader});
+      // return this.httpClient.get(`${environment.zkillUrl}characterID/${entityID}/`, {headers: this.reqHeader});
+      return 'TODO'
     }
   }
 
@@ -56,33 +58,6 @@ export class HttpService {
 //   ]
 // }
 
-// GET kill and loss mail ID's
-
-// https://zkillboard.com/api/characterID/268946627/
-
-// do not pass kills or losses to get both
-// https://zkillboard.com/api/kills/characterID/268946627/
-// https://zkillboard.com/api/losses/characterID/268946627/
-
-// responce
-// [
-//   {
-//     killmail_id: 84663804,
-//     zkb: {
-//       locationID: 40221769,
-//       hash: "e2d651d6cedd78b7550b8ffead0b5c40df458ea0",
-//       fittedValue: 75548029.35,
-//       totalValue: 75719170.79,
-//       points: 1,
-//       npc: false,
-//       solo: false,
-//       awox: false,
-//     },
-//   },
-//   {
-//     killmail_id: 75962440,
-//     zkb: {
-//     ...
 
 // ---//---
 
