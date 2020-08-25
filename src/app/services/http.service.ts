@@ -38,7 +38,7 @@ export class HttpService {
     }
   }
 
-  public getEntityKillData(killMailId, killMailHash) {
+  public getEntityKillData(killMailId: number, killMailHash: string) {
     if (!environment.production) { // TODO change dev from below line when moving to production
       return this.httpClient.get(`${environment.esiUrl}dev/killmails/${killMailId}/${killMailHash}/?datasource=tranquility`)
     }
