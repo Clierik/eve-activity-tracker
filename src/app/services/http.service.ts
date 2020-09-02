@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment'
+import { environment } from 'src/environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { CharacterID } from 'src/app/interfaces'
+import { CharacterID } from 'src/app/interfaces';
+import { CookieService } from 'ngx-cookie';
 
 @Injectable({
   providedIn: 'root'
@@ -17,9 +18,27 @@ export class HttpService {
     { "name": "3333333", "value": 7 },
     { "name": "444", "value": 2 }
   ];
-  reqHeader = new HttpHeaders({'Content-Type': 'application/json'});
+  private reqHeader = new HttpHeaders({
+    'Content-Type': 'application/json'
+  });
 
-  constructor(public httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient,
+              private cookieService: CookieService) {
+    this.checkSessionStatus();
+  }
+
+  private checkSessionStatus() {
+    // for checking if SSO authentication is valid
+    // if ( no ) { get new token from this.getToken }
+  }
+
+  public getToken() {
+    const body: URLSearchParams = new URLSearchParams();
+    // body.set('',);
+    return this.httpClient.post(`${environment.esiUrl}`, body.toString(), {
+      headers: this.reqHeader, responseType: 'text'
+    });
+  }
 
   hello() {
     return this.data;
@@ -33,7 +52,6 @@ export class HttpService {
 
   public getEntityKillLossData(entityID) {
     if (!environment.production) {
-      // return this.httpClient.get(`${environment.zkillUrl}characterID/${entityID}/`, {headers: this.reqHeader});
       return 'TODO'
     }
   }
@@ -57,35 +75,3 @@ export class HttpService {
 //     90211685
 //   ]
 // }
-
-
-// ---//---
-
-// https://imageserver.eveonline.com/
-// Documentation for getting images:
-// Alliance logos: https://images.evetech.net/alliances/434243723/logo
-// Character portraits: https://images.evetech.net/characters/1338057886/portrait
-// Corporation logos: https://images.evetech.net/corporations/109299958/logo
-// Type icons: https://images.evetech.net/types/587/icon
-// Type renders: https://images.evetech.net/types/587/render
-// example: https://images.evetech.net/types/587/render?size=256
-// Currently the service only support a set of sizes that are powers of 2, i.e.: 32, 64, 128, 256, 512 and 1024.
-// Tenant defaults to tranquility 
-
-// ---//---
-
-// https://docs.esi.evetech.net/docs/id_ranges.html
-// esi-docs
-// ID Ranges
-// from         to            description
-// 90,000,000	  98,000,000	  EVE characters created after 2010-11-03
-// 98,000,000	  99,000,000	  EVE corporations created after 2010-11-03
-// 99,000,000	  100,000,000	  EVE alliances created after 2010-11-03
-
-// orther api's
-// CCP_IMAGE_SERVER            =   https://images.evetech.net
-// Z_KILLBOARD                 =   https://zkillboard.com/api
-// EVEEYE                      =   https://eveeye.com
-// DOTLAN                      =   http://evemaps.dotlan.net
-// ANOIK                       =   http://anoik.is
-// EVE_SCOUT                   =   https://www.eve-scout.com/api

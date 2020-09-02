@@ -12,6 +12,7 @@ import { SearchComponentComponent } from './components/search-component/search-c
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TimeService } from 'src/app/services/time.service';
+import { CookieModule } from 'ngx-cookie';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TimeService } from 'src/app/services/time.service';
     NgxChartsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CookieModule.forRoot()
   ],
   providers: [
     HttpService,

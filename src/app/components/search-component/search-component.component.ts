@@ -37,13 +37,13 @@ export class SearchComponentComponent implements OnInit {
   }
 
   getKillData(id) {
-    this.http.getEntityKillLossData(id).subscribe(resp => {
-      console.log(resp);
-      // DOTO next on the list to sort out SSO authentication 
-      // gonna try avoiding zkillboard as a data source
-    }, err => {
-      console.log(err);
-    });
+    // this.http.getEntityKillLossData(id).subscribe(resp => {
+    //   console.log(resp);
+    //   // DOTO next on the list to sort out SSO authentication 
+    //   // gonna try avoiding zkillboard as a data source
+    // }, err => {
+    //   console.log(err);
+    // });
   }
 
 }

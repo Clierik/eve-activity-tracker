@@ -24,6 +24,7 @@
     "@swimlane/ngx-charts": "^14.0.0",
     "angular": "^1.8.0",
     "moment": "^2.27.0",
+    "ngx-cookie": "^5.0.0",
     "particles.js": "^2.0.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
