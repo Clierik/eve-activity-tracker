@@ -21,7 +21,7 @@ export class SearchComponentComponent implements OnInit {
 
   }
 
-  search(input) {
+  private search(input) {
     if (input.keyCode === 13) {
       this.searchInput = input.target.value;
       this.http.getEntityIdByName(input.target.value).subscribe(resp => {
@@ -36,7 +36,7 @@ export class SearchComponentComponent implements OnInit {
     }
   }
 
-  getKillData(id) {
+  private getKillData(id) {
     // this.http.getEntityKillLossData(id).subscribe(resp => {
     //   console.log(resp);
     //   // DOTO next on the list to sort out SSO authentication 
