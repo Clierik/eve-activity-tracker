@@ -24,18 +24,20 @@ export class HttpService {
   private authHeader = new HttpHeaders({
     'Content-Type': 'application/x-www-form-urlencoded'
   });
+  sessionStorrage = window.localStorage;
 
   constructor(private httpClient: HttpClient,
               private cookieService: CookieService) {
     this.checkSessionStatus();
   }
 
-  private checkSessionStatus(): {
+  private checkSessionStatus() {
     // for checking if SSO authentication is valid
     // if ( no ) { get new token from this.getToken }
+    
   }
 
-  public getToken() {
+  private getToken() {
     const body: URLSearchParams = new URLSearchParams();
     body.set('ClientId', environment.clientId);
     body.set('SecretKey', environment.secretKey);
@@ -43,6 +45,10 @@ export class HttpService {
     return this.httpClient.post(`${environment.esiUrl}`, body.toString(), {
       headers: this.reqHeader, responseType: 'text'
     });
+  }
+
+  private functionNamePending() {
+
   }
 
   hello() {
